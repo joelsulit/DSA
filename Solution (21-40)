@@ -1,0 +1,91 @@
+# 21 Reverse string
+s = "hello"
+print(s[::-1])
+
+# 22 Palindrome
+print(s == s[::-1])
+
+# 23 Count vowels
+count = 0
+for c in s:
+    if c in "aeiou":
+        count += 1
+print(count)
+
+# 24 Count consonants
+count = 0
+for c in s:
+    if c.isalpha() and c not in "aeiou":
+        count += 1
+print(count)
+
+# 25 Remove spaces
+s = "hello world"
+print(s.replace(" ",""))
+
+# 26 First non-repeating
+for c in s:
+    if s.count(c)==1:
+        print(c)
+        break
+
+# 27 Anagram
+a="listen"; b="silent"
+print(sorted(a)==sorted(b))
+
+# 28 Uppercase without upper()
+res=""
+for c in s:
+    if 'a'<=c<='z':
+        res += chr(ord(c)-32)
+    else:
+        res += c
+print(res)
+
+# 29 Count words
+print(len(s.split()))
+
+# 30 Replace spaces
+print(s.replace(" ","-"))
+
+# 31 Longest word
+s="I love programming"
+words = s.split()
+longest = max(words, key=len)
+print(longest)
+
+# 32 Remove duplicate chars
+res=""
+for c in s:
+    if c not in res:
+        res += c
+print(res)
+
+# 33 Substring check
+print("love" in s)
+
+# 34 All occurrences
+for i in range(len(s)):
+    if s[i]=='o':
+        print(i)
+
+# 35 Capitalize words
+print(" ".join([w.capitalize() for w in s.split()]))
+
+# 36 Reverse words
+print(" ".join(s.split()[::-1]))
+
+# 37 Only digits
+print(s.isdigit())
+
+# 38 ASCII sum
+total=0
+for c in s:
+    total+=ord(c)
+print(total)
+
+# 39 Shortest word
+print(min(words, key=len))
+
+# 40 Remove character
+print(s.replace("o",""))

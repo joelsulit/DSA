@@ -1,0 +1,136 @@
+# 41 Frequency dict
+arr=[1,2,2,3]
+freq={}
+for x in arr:
+    freq[x]=freq.get(x,0)+1
+print(freq)
+
+# 42 Most frequent
+print(max(freq, key=freq.get))
+
+# 43 Group anagrams
+words=["eat","tea","tan"]
+d={}
+for w in words:
+    key="".join(sorted(w))
+    d.setdefault(key,[]).append(w)
+print(d.values())
+
+# 44 First repeating
+seen=set()
+for x in arr:
+    if x in seen:
+        print(x)
+        break
+    seen.add(x)
+
+# 45 Arrays equal
+a=[1,2]; b=[2,1]
+print(sorted(a)==sorted(b))
+
+# 46 Pair sum
+arr=[1,2,3,4]
+target=5
+count=0
+for i in range(len(arr)):
+    for j in range(i+1,len(arr)):
+        if arr[i]+arr[j]==target:
+            count+=1
+print(count)
+
+# 47 Unique elements
+print(list(set(arr)))
+
+# 48 Char count
+s="hello"
+d={}
+for c in s:
+    d[c]=d.get(c,0)+1
+print(d)
+
+# 49 Merge dict
+d1={"a":1}; d2={"b":2}
+d1.update(d2)
+print(d1)
+
+# 50 Invert dict
+d={"a":1,"b":2}
+print({v:k for k,v in d.items()})
+
+# 51 Keys with max value
+d = {"a":10, "b":20, "c":20}
+max_val = max(d.values())
+for k in d:
+    if d[k] == max_val:
+        print(k)
+
+# 52 Count word occurrences
+s = "this is a test this is"
+words = s.split()
+freq = {}
+for w in words:
+    freq[w] = freq.get(w,0) + 1
+print(freq)
+
+# 53 Remove duplicate values in dict
+d = {"a":1,"b":2,"c":1}
+res = {}
+seen = set()
+for k,v in d.items():
+    if v not in seen:
+        res[k] = v
+        seen.add(v)
+print(res)
+
+# 54 Check subset
+a = [1,2]
+b = [1,2,3,4]
+print(set(a).issubset(set(b)))
+
+# 55 Common keys
+d1 = {"a":1,"b":2}
+d2 = {"b":3,"c":4}
+for k in d1:
+    if k in d2:
+        print(k)
+
+# 56 Stack using list
+stack = []
+stack.append(1)
+stack.append(2)
+print(stack.pop())
+
+# 57 Queue using list
+queue = []
+queue.append(1)
+queue.append(2)
+print(queue.pop(0))
+
+# 58 Balanced parentheses
+s = "()[]{}"
+stack = []
+pairs = {')':'(', ']':'[', '}':'{'}
+valid = True
+for c in s:
+    if c in "([{":
+        stack.append(c)
+    else:
+        if not stack or stack[-1] != pairs[c]:
+            valid = False
+            break
+        stack.pop()
+print(valid)
+
+# 59 Reverse stack
+stack = [1,2,3]
+print(stack[::-1])
+
+# 60 Next greater element (simple)
+arr = [2,1,3]
+for i in range(len(arr)):
+    found = -1
+    for j in range(i+1,len(arr)):
+        if arr[j] > arr[i]:
+            found = arr[j]
+            break
+    print(found, end=" ")

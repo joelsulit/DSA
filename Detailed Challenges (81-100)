@@ -1,0 +1,145 @@
+🔹 Math & Bit
+81. Prime Check
+Task: Check if number is prime.
+Given:
+n = 7
+Output:
+True
+________________________________________
+82. Factors
+Task: Find all factors.
+Given:
+n = 6
+Output:
+1 2 3 6
+________________________________________
+83. Power of 2
+Task: Check if number is power of 2.
+Given:
+n = 8
+Output:
+True
+________________________________________
+84. Count Set Bits
+Task: Count number of 1s in binary.
+Given:
+n = 5
+Output:
+2
+________________________________________
+85. Decimal to Binary
+Task: Convert decimal to binary.
+Given:
+n = 10
+Output:
+1010
+________________________________________
+86. Swap Without Temp
+Task: Swap two numbers without temp variable.
+Given:
+a = 5
+b = 10
+Output:
+10 5
+________________________________________
+87. LCM
+Task: Find least common multiple.
+Given:
+a = 4
+b = 6
+Output:
+12
+________________________________________
+88. GCD (Again)
+Task: Compute GCD again (practice).
+Given:
+a = 20
+b = 8
+Output:
+4
+________________________________________
+89. Armstrong Number
+Task: Check Armstrong number.
+Given:
+n = 153
+Output:
+True
+________________________________________
+90. Reverse Integer
+Task: Reverse digits of number.
+Given:
+n = 123
+Output:
+321
+________________________________________
+🔹 Misc Logic
+91. FizzBuzz
+Task: Print 1–15 with rules:
+•	multiple of 3 → Fizz
+•	multiple of 5 → Buzz
+•	both → FizzBuzz
+Output:
+1 2 Fizz 4 Buzz ...
+________________________________________
+92. Leap Year
+Task: Check if year is leap year.
+Given:
+year = 2024
+Output:
+True
+________________________________________
+93. Largest of Three
+Task: Find largest among three numbers.
+Given:
+a=1, b=5, c=3
+Output:
+5
+________________________________________
+94. Perfect Number
+Task: Check if number equals sum of divisors.
+Given:
+n = 6
+Output:
+True
+________________________________________
+95. Sum of N Numbers
+Task: Sum first n natural numbers.
+Given:
+n = 5
+Output:
+15
+________________________________________
+96. Count Digits (Loop Way)
+Task: Count digits using loop.
+Given:
+n = 1234
+Output:
+4
+________________________________________
+97. Reverse Number (Loop)
+Task: Reverse using loop.
+Given:
+n = 456
+Output:
+654
+________________________________________
+98. Sum of Even Numbers
+Task: Sum all even numbers up to n.
+Given:
+n = 6
+Output:
+12
+________________________________________
+99. Multiplication Table
+Task: Print table of a number.
+Given:
+n = 3
+Output:
+3 6 9 12 ...
+________________________________________
+100. Simple Calculator
+Task: Perform +, -, *, /.
+Given:
+a=4, b=2, op="+"
+Output:
+6

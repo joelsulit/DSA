@@ -1,0 +1,149 @@
+🔹 Searching & Sorting
+61. Linear Search
+Task: Find index of target using loop.
+Given:
+arr = [1, 2, 3]
+target = 2
+Output:
+1
+________________________________________
+62. Binary Search
+Task: Find index using binary search (sorted array).
+Given:
+arr = [1, 2, 3, 4, 5]
+target = 4
+Output:
+3
+________________________________________
+63. First Occurrence
+Task: Find first position of element.
+Given:
+arr = [1, 2, 2, 3]
+target = 2
+Output:
+1
+________________________________________
+64. Last Occurrence
+Task: Find last position of element.
+Given:
+arr = [1, 2, 2, 3]
+target = 2
+Output:
+2
+________________________________________
+65. Bubble Sort
+Task: Sort array using bubble sort.
+Given:
+arr = [3, 2, 1]
+Output:
+[1, 2, 3]
+________________________________________
+66. Selection Sort
+Task: Sort array using selection sort.
+Given:
+arr = [3, 1, 2]
+Output:
+[1, 2, 3]
+________________________________________
+67. Insertion Sort
+Task: Sort array using insertion sort.
+Given:
+arr = [3, 1, 2]
+Output:
+[1, 2, 3]
+________________________________________
+68. Check Sorted (Binary Logic)
+Task: Check if array is sorted without using sorted().
+Given:
+arr = [1, 2, 3]
+Output:
+True
+________________________________________
+69. Kth Smallest
+Task: Find kth smallest element.
+Given:
+arr = [7, 2, 5, 3]
+k = 2
+Output:
+3
+________________________________________
+70. Kth Largest
+Task: Find kth largest element.
+Given:
+arr = [7, 2, 5, 3]
+k = 2
+Output:
+5
+________________________________________
+🔹 Recursion / Logic
+71. Factorial
+Task: Compute factorial of n.
+Given:
+n = 5
+Output:
+120
+________________________________________
+72. Fibonacci
+Task: Print first n Fibonacci numbers.
+Given:
+n = 5
+Output:
+0 1 1 2 3
+________________________________________
+73. Sum of Digits
+Task: Add digits of a number.
+Given:
+n = 123
+Output:
+6
+________________________________________
+74. Reverse String (Recursion Idea)
+Task: Reverse string manually.
+Given:
+s = "abc"
+Output:
+"cba"
+________________________________________
+75. Palindrome Check
+Task: Check palindrome using logic.
+Given:
+s = "madam"
+Output:
+True
+________________________________________
+76. Count Digits
+Task: Count digits in a number.
+Given:
+n = 12345
+Output:
+5
+________________________________________
+77. Power (xⁿ)
+Task: Compute power.
+Given:
+x = 2
+n = 3
+Output:
+8
+________________________________________
+78. Print n to 1
+Task: Print numbers from n down to 1.
+Given:
+n = 5
+Output:
+5 4 3 2 1
+________________________________________
+79. Print 1 to n
+Task: Print numbers from 1 to n.
+Given:
+n = 5
+Output:
+1 2 3 4 5
+________________________________________
+80. GCD
+Task: Find greatest common divisor.
+Given:
+a = 12
+b = 18
+Output:
+6

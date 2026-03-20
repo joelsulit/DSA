@@ -1,0 +1,116 @@
+🔹 Arrays & Lists (1–20)
+1.	Find the maximum element in a list
+2.	Find the minimum element in a list
+3.	Reverse a list
+4.	Check if a list is sorted
+5.	Find the sum of all elements
+6.	Count even numbers in a list
+7.	Remove duplicates from a list
+8.	Find the second largest number
+9.	Merge two sorted lists
+10.	Find the index of a target element
+11.	Rotate list left by 1
+12.	Rotate list right by 1
+13.	Find common elements in two lists
+14.	Find missing number from 1 to n
+15.	Find duplicates in a list
+16.	Split list into even and odd
+17.	Find intersection of two lists
+18.	Find union of two lists
+19.	Move all zeros to end
+20.	Count frequency of elements
+________________________________________
+🔹 Strings (21–40)
+21.	Reverse a string
+22.	Check palindrome
+23.	Count vowels
+24.	Count consonants
+25.	Remove spaces
+26.	Find first non-repeating character
+27.	Check anagram
+28.	Convert string to uppercase without .upper()
+29.	Count words in a sentence
+30.	Replace spaces with hyphens
+31.	Find longest word
+32.	Remove duplicate characters
+33.	Check if substring exists
+34.	Find all occurrences of a character
+35.	Capitalize first letter of each word
+36.	Reverse words in sentence
+37.	Check if string contains only digits
+38.	Find ASCII sum of string
+39.	Find shortest word
+40.	Remove a specific character
+________________________________________
+🔹 Hashing / Dictionaries (41–55)
+41.	Count frequency using dictionary
+42.	Find most frequent element
+43.	Group anagrams
+44.	Find first repeating element
+45.	Check if two arrays are equal
+46.	Count pairs with given sum
+47.	Find unique elements
+48.	Build character count map
+49.	Merge two dictionaries
+50.	Invert dictionary (swap keys/values)
+51.	Find keys with max value
+52.	Count occurrences of each word
+53.	Remove duplicate values
+54.	Check subset (list1 in list2)
+55.	Find common keys in two dicts
+________________________________________
+🔹 Stack & Queue (56–65)
+56.	Implement stack using list
+57.	Implement queue using list
+58.	Check balanced parentheses
+59.	Reverse a stack
+60.	Find next greater element
+61.	Evaluate postfix expression
+62.	Implement min stack
+63.	Simulate queue using two stacks
+64.	Reverse first k elements of queue
+65.	Check redundant parentheses
+________________________________________
+🔹 Searching & Sorting (66–75)
+66.	Implement linear search
+67.	Implement binary search
+68.	Find first occurrence of element
+69.	Find last occurrence of element
+70.	Bubble sort
+71.	Selection sort
+72.	Insertion sort
+73.	Check if array is sorted using binary search logic
+74.	Find kth smallest element
+75.	Find kth largest element
+________________________________________
+🔹 Recursion (76–85)
+76.	Factorial using recursion
+77.	Fibonacci (recursive)
+78.	Sum of digits
+79.	Reverse string recursively
+80.	Check palindrome recursively
+81.	Count digits recursively
+82.	Power of number (x^n)
+83.	Print numbers from n to 1
+84.	Print numbers from 1 to n
+85.	Find GCD using recursion
+________________________________________
+🔹 Math & Bit Manipulation (86–95)
+86.	Check if number is prime
+87.	Find all factors
+88.	Check power of 2
+89.	Count set bits
+90.	Convert decimal to binary
+91.	Swap two numbers without temp
+92.	Find LCM
+93.	Find GCD (iterative)
+94.	Check Armstrong number
+95.	Reverse an integer
+________________________________________
+🔹 Misc / Easy Logic (96–100)
+96.	FizzBuzz
+97.	Find leap year
+98.	Find largest of three numbers
+99.	Check perfect number
+100.	Sum of first n natural numbers
+

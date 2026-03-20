@@ -1,0 +1,144 @@
+🔹 Strings
+21. Reverse a String
+Task: Reverse the given string.
+Given:
+s = "hello"
+Output:
+"olleh"
+________________________________________
+22. Check Palindrome
+Task: Check if the string reads the same forward and backward.
+Given:
+s = "madam"
+Output:
+True
+________________________________________
+23. Count Vowels
+Task: Count the number of vowels (a, e, i, o, u).
+Given:
+s = "hello"
+Output:
+2
+________________________________________
+24. Count Consonants
+Task: Count all consonants in the string.
+Given:
+s = "hello"
+Output:
+3
+________________________________________
+25. Remove Spaces
+Task: Remove all spaces in the string.
+Given:
+s = "hello world"
+Output:
+"helloworld"
+________________________________________
+26. First Non-Repeating Character
+Task: Find the first character that does not repeat.
+Given:
+s = "aabbcde"
+Output:
+"c"
+________________________________________
+27. Check Anagram
+Task: Check if two strings are anagrams.
+Given:
+a = "listen"
+b = "silent"
+Output:
+True
+________________________________________
+28. Convert to Uppercase (No .upper())
+Task: Convert lowercase letters to uppercase manually.
+Given:
+s = "abc"
+Output:
+"ABC"
+________________________________________
+29. Count Words
+Task: Count the number of words in a sentence.
+Given:
+s = "I love Python"
+Output:
+3
+________________________________________
+30. Replace Spaces with Hyphens
+Task: Replace all spaces with -.
+Given:
+s = "hello world"
+Output:
+"hello-world"
+________________________________________
+31. Find Longest Word
+Task: Find the longest word in a sentence.
+Given:
+s = "I love programming"
+Output:
+"programming"
+________________________________________
+32. Remove Duplicate Characters
+Task: Remove duplicate letters from a string.
+Given:
+s = "banana"
+Output:
+"ban"
+________________________________________
+33. Substring Check
+Task: Check if a substring exists.
+Given:
+s = "hello world"
+sub = "world"
+Output:
+True
+________________________________________
+34. Find All Occurrences
+Task: Print all indices of a character.
+Given:
+s = "hello"
+char = "l"
+Output:
+2 3
+________________________________________
+35. Capitalize Each Word
+Task: Capitalize the first letter of every word.
+Given:
+s = "hello world"
+Output:
+"Hello World"
+________________________________________
+36. Reverse Words in Sentence
+Task: Reverse the order of words.
+Given:
+s = "I love Python"
+Output:
+"Python love I"
+________________________________________
+37. Check Only Digits
+Task: Check if string contains only numbers.
+Given:
+s = "12345"
+Output:
+True
+________________________________________
+38. ASCII Sum
+Task: Find total ASCII value of all characters.
+Given:
+s = "ABC"
+Output:
+198
+________________________________________
+39. Find Shortest Word
+Task: Find the shortest word in a sentence.
+Given:
+s = "I love programming"
+Output:
+"I"
+________________________________________
+40. Remove Specific Character
+Task: Remove all occurrences of a character.
+Given:
+s = "hello"
+char = "l"
+Output:
+"heo"

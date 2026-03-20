@@ -1,0 +1,130 @@
+# 81 Count digits
+n=12345
+print(len(str(n)))
+
+# 82 Power (x^n)
+x=2; n=5
+res=1
+for _ in range(n):
+    res*=x
+print(res)
+
+# 83 Print n to 1
+n=5
+for i in range(n,0,-1):
+    print(i,end=" ")
+print()
+
+# 84 Print 1 to n
+n=5
+for i in range(1,n+1):
+    print(i,end=" ")
+print()
+
+# 85 GCD (recursive idea → loop)
+a,b=48,18
+while b:
+    a,b=b,a%b
+print(a)
+
+# 86 Prime check
+n=11
+is_prime=True
+for i in range(2,int(n**0.5)+1):
+    if n%i==0:
+        is_prime=False
+print(is_prime)
+
+# 87 Factors
+n=12
+for i in range(1,n+1):
+    if n%i==0:
+        print(i,end=" ")
+print()
+
+# 88 Power of 2
+n=16
+print(n>0 and (n&(n-1))==0)
+
+# 89 Count set bits
+n=13
+count=0
+while n:
+    count+=n&1
+    n>>=1
+print(count)
+
+# 90 Decimal to binary
+n=10
+print(bin(n)[2:])
+
+# 91 Swap without temp
+a=5; b=10
+a=a+b
+b=a-b
+a=a-b
+print(a,b)
+
+# 92 LCM
+x,y=12,15
+a,b=x,y
+while b:
+    a,b=b,a%b
+gcd=a
+print((x*y)//gcd)
+
+# 93 GCD (again iterative simple)
+a,b=20,8
+while b:
+    a,b=b,a%b
+print(a)
+
+# 94 Armstrong number
+n=153
+power=len(str(n))
+print(n==sum(int(d)**power for d in str(n)))
+
+# 95 Reverse integer
+n=9876
+rev=0
+while n>0:
+    rev=rev*10+n%10
+    n//=10
+print(rev)
+
+# 96 FizzBuzz
+for i in range(1,16):
+    if i%3==0 and i%5==0:
+        print("FizzBuzz")
+    elif i%3==0:
+        print("Fizz")
+    elif i%5==0:
+        print("Buzz")
+    else:
+        print(i)
+
+# 97 Leap year
+y=2023
+print(y%4==0 and (y%100!=0 or y%400==0))
+
+# 98 Largest of three
+a,b,c=10,25,15
+largest=a
+if b>largest: largest=b
+if c>largest: largest=c
+print(largest)
+
+# 99 Perfect number
+n=28
+sum_div=0
+for i in range(1,n):
+    if n%i==0:
+        sum_div+=i
+print(sum_div==n)
+
+# 100 Sum of first n natural numbers
+n=10
+total=0
+for i in range(1,n+1):
+    total+=i
+print(total)

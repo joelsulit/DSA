@@ -1,0 +1,94 @@
+# 1 Max element
+arr = [3,7,2,9,5]
+max_val = arr[0]
+for num in arr:
+    if num > max_val:
+        max_val = num
+print(max_val)
+
+# 2 Min element
+min_val = arr[0]
+for num in arr:
+    if num < min_val:
+        min_val = num
+print(min_val)
+
+# 3 Reverse list
+print(arr[::-1])
+
+# 4 Check sorted
+print(arr == sorted(arr))
+
+# 5 Sum
+total = 0
+for num in arr:
+    total += num
+print(total)
+
+# 6 Count even
+count = 0
+for num in arr:
+    if num % 2 == 0:
+        count += 1
+print(count)
+
+# 7 Remove duplicates
+print(list(set(arr)))
+
+# 8 Second largest
+temp = list(set(arr))
+temp.sort()
+print(temp[-2])
+
+# 9 Merge sorted
+a = [1,3,5]
+b = [2,4,6]
+print(sorted(a+b))
+
+# 10 Find index
+target = 9
+print(arr.index(target) if target in arr else -1)
+
+# 11 Rotate left
+print(arr[1:] + arr[:1])
+
+# 12 Rotate right
+print(arr[-1:] + arr[:-1])
+
+# 13 Common elements
+a = [1,2,3]
+b = [2,3,4]
+print(list(set(a) & set(b)))
+
+# 14 Missing number
+arr = [1,2,4,5]
+n = 5
+print(n*(n+1)//2 - sum(arr))
+
+# 15 Duplicates
+dup = []
+for x in arr:
+    if arr.count(x) > 1 and x not in dup:
+        dup.append(x)
+print(dup)
+
+# 16 Split even odd
+even = [x for x in arr if x%2==0]
+odd = [x for x in arr if x%2!=0]
+print(even, odd)
+
+# 17 Intersection
+print(list(set(a) & set(b)))
+
+# 18 Union
+print(list(set(a) | set(b)))
+
+# 19 Move zeros
+arr = [1,0,2,0,3]
+print([x for x in arr if x!=0] + [0]*arr.count(0))
+
+# 20 Frequency
+freq = {}
+for x in arr:
+    freq[x] = freq.get(x,0)+1
+print(freq)

@@ -1,0 +1,142 @@
+1️⃣ Arrays & Lists
+Key Concepts:
+•	Access: arr[i]
+•	Length: len(arr)
+•	Append: arr.append(x)
+•	Remove: arr.remove(x) or [x for x in arr if x!=val]
+•	Slicing:
+o	arr[::-1] → reverse
+o	arr[1:] + arr[:1] → rotate left
+o	arr[-1:] + arr[:-1] → rotate right
+•	Check sorted: arr == sorted(arr)
+Common Operations:
+•	Max: max(arr) or loop
+•	Min: min(arr) or loop
+•	Sum: sum(arr) or loop
+•	Count condition: sum(1 for x in arr if x%2==0)
+•	Unique: list(set(arr))
+•	Intersection/Union: list(set(a) & set(b)), list(set(a) | set(b))
+•	Next greater: loop for i,j nested
+Tips:
+•	Use loops for small datasets (<1000)
+•	Use sets for uniqueness/intersection
+•	For rotation, slicing is easiest
+________________________________________
+2️⃣ Strings
+Key Concepts:
+•	Indexing: s[i]
+•	Slicing: s[start:end:step]
+•	Length: len(s)
+•	Split: s.split() → words
+•	Join: " ".join(list_of_words)
+Common Operations:
+•	Reverse string: s[::-1]
+•	Palindrome: s == s[::-1]
+•	Count vowels/consonants: for c in s: if c in "aeiou": ...
+•	Remove spaces: s.replace(" ","")
+•	Capitalize words: " ".join([w.capitalize() for w in s.split()])
+•	Substring check: "sub" in s
+•	First non-repeating: loop + s.count(c)
+Tips:
+•	Strings are immutable → need new string for modifications
+•	For frequency, use dict
+________________________________________
+3️⃣ Hashing / Dictionaries
+Key Concepts:
+•	Create: d = {}
+•	Add/update: d[key] = value
+•	Access: d.get(key, default)
+•	Iterate: for k,v in d.items(): ...
+•	Setdefault: d.setdefault(key, []).append(value)
+Common Patterns:
+•	Frequency counting: for x in arr: d[x] = d.get(x,0)+1
+•	Most frequent: max(d, key=d.get)
+•	Remove duplicates: track seen set
+•	Intersection of keys: set(d1) & set(d2)
+•	Merge dicts: d1.update(d2)
+Tips:
+•	Use set() for unique checks
+•	Use dict for counting & grouping
+________________________________________
+4️⃣ Stack & Queue
+Stack:
+•	LIFO → push/pop:
+stack = []
+stack.append(x)
+stack.pop()
+•	Reverse stack: stack[::-1]
+Queue:
+•	FIFO → enqueue/dequeue:
+queue = []
+queue.append(x) # enqueue
+queue.pop(0)    # dequeue
+Common Patterns:
+•	Balanced parentheses: push open, pop if match closing
+•	Next greater element: use stack for O(n)
+•	Reverse order → stack pop
+Tips:
+•	Lists can simulate both stack and queue
+•	For high performance queue, use collections.deque
+________________________________________
+5️⃣ Recursion / Loop Logic
+Factorial: n! = n * (n-1)!
+Fibonacci: F(n) = F(n-1) + F(n-2)
+Tips:
+•	Loops can simulate recursion for small numbers
+•	Recursion stack limited in Python → prefer iterative if n large
+Common Operations:
+•	Reverse string/number: recursion or loop
+•	Sum digits: sum(int(d) for d in str(n))
+•	Print 1→n or n→1: for i in range(1,n+1) or range(n,0,-1)
+________________________________________
+6️⃣ Searching
+Linear Search: loop through array → O(n)
+Binary Search: sorted array → O(log n)
+l,r = 0,len(arr)-1
+while l <= r:
+    mid = (l+r)//2
+    if arr[mid]==target: ...
+Tips:
+•	Always check sorted array for binary search
+•	First/last occurrence → adjust l and r
+________________________________________
+7️⃣ Sorting
+Bubble Sort: swap adjacent if wrong order
+Selection Sort: select min for each position
+Insertion Sort: insert element in correct position
+Python Tip: use sorted(arr) for real problems
+________________________________________
+8️⃣ Math / Number Theory
+Prime Check: loop till sqrt(n), check divisibility
+GCD: Euclid’s algorithm
+while b:
+    a,b = b,a%b
+LCM: (a*b)//GCD(a,b)
+Armstrong Number: sum of digits^power = number
+Perfect Number: sum of divisors = number
+Power of 2: n > 0 and (n & (n-1))==0
+Binary conversion: bin(n)[2:]
+________________________________________
+9️⃣ Bit Manipulation
+•	Count set bits: while n: count += n&1; n >>=1
+•	Swap without temp: a = a+b; b=a-b; a=a-b
+________________________________________
+🔟 Miscellaneous
+FizzBuzz: check multiples of 3 & 5
+Leap Year: divisible by 4 & (not 100 or divisible by 400)
+Reverse Integer: modulo 10 & division
+Sum Even / Odd / Natural numbers: loop or formula
+•	Sum n: n*(n+1)//2
+•	Sum first k even: k*(k+1)
+•	Sum first k odd: k*k
+________________________________________
+💡 Python Tricks to Remember
+Operation	Python Tip
+Reverse list	arr[::-1]
+Unique elements	list(set(arr))
+Frequency	dict.get(key,0)+1
+Loop with index	for i, val in enumerate(arr)
+Swap	a,b = b,a
+Check substring	"sub" in s
+Capitalize words	" ".join([w.capitalize() for w in s.split()])
+Rotate list	arr[1:] + arr[:1] or arr[-1:] + arr[:-1]

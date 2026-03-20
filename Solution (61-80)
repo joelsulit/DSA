@@ -1,0 +1,132 @@
+# 61 Linear search
+arr=[1,2,3]
+target=2
+for i in range(len(arr)):
+    if arr[i]==target:
+        print(i)
+
+# 62 Binary search
+arr=[1,2,3,4,5]
+l=0; r=len(arr)-1; target=4
+while l<=r:
+    mid=(l+r)//2
+    if arr[mid]==target:
+        print(mid); break
+    elif arr[mid]<target:
+        l=mid+1
+    else:
+        r=mid-1
+
+# 63 Bubble sort
+arr=[3,2,1]
+for i in range(len(arr)):
+    for j in range(len(arr)-1):
+        if arr[j]>arr[j+1]:
+            arr[j],arr[j+1]=arr[j+1],arr[j]
+print(arr)
+
+# 64 Factorial
+n=5
+fact=1
+for i in range(1,n+1):
+    fact*=i
+print(fact)
+
+# 65 Fibonacci
+a,b=0,1
+for _ in range(5):
+    print(a,end=" ")
+    a,b=b,a+b
+
+# 66 Prime
+n=7
+is_prime=True
+for i in range(2,n):
+    if n%i==0:
+        is_prime=False
+print(is_prime)
+
+# 67 GCD
+a,b=12,18
+while b:
+    a,b=b,a%b
+print(a)
+
+# 68 LCM
+x,y=12,18
+a,b=x,y
+while b:
+    a,b=b,a%b
+gcd=a
+print((x*y)//gcd)
+
+# 69 Armstrong
+n=153
+print(n==sum(int(d)**3 for d in str(n)))
+
+# 70 Reverse int
+n=123
+print(int(str(n)[::-1]))
+
+# 71 FizzBuzz
+for i in range(1,16):
+    if i%3==0 and i%5==0:
+        print("FizzBuzz")
+    elif i%3==0:
+        print("Fizz")
+    elif i%5==0:
+        print("Buzz")
+    else:
+        print(i)
+
+# 72 Leap year
+y=2024
+print(y%4==0 and (y%100!=0 or y%400==0))
+
+# 73 Largest of 3
+a,b,c=1,5,3
+print(max(a,b,c))
+
+# 74 Perfect number
+n=6
+print(sum(i for i in range(1,n) if n%i==0)==n)
+
+# 75 Sum n natural
+n=10
+print(n*(n+1)//2)
+
+# 76 Factorial (recursive style but no def → simulate)
+n=5
+fact=1
+for i in range(1,n+1):
+    fact*=i
+print(fact)
+
+# 77 Fibonacci (recursive idea → iterative)
+a,b=0,1
+for _ in range(6):
+    print(a,end=" ")
+    a,b=b,a+b
+print()
+
+# 78 Sum of digits
+n=1234
+total=0
+for d in str(n):
+    total+=int(d)
+print(total)
+
+# 79 Reverse string (again alt way)
+s="hello"
+res=""
+for c in s:
+    res=c+res
+print(res)
+
+# 80 Palindrome check (loop way)
+s="madam"
+is_pal=True
+for i in range(len(s)//2):
+    if s[i]!=s[-i-1]:
+        is_pal=False
+print(is_pal)

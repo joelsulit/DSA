@@ -1,0 +1,129 @@
+Challenge 21: Next Greater Element
+nums = [4,5,2,10,8]
+res = [-1]*len(nums)
+stack = []
+for i,n in enumerate(nums):
+    while stack and nums[stack[-1]]<n:
+        idx = stack.pop()
+        res[idx] = n
+    stack.append(i)
+print(res)
+________________________________________
+Challenge 22: Daily Temperatures
+temps = [73,74,75,71,69,72,76,73]
+res = [0]*len(temps)
+stack = []
+for i,t in enumerate(temps):
+    while stack and temps[stack[-1]]<t:
+        idx = stack.pop()
+        res[idx] = i-idx
+    stack.append(i)
+print(res)
+________________________________________
+Challenge 23: Stock Span Problem
+prices = [100,80,60,70,60,75,85]
+res = []
+stack = []
+for i,p in enumerate(prices):
+    span = 1
+    while stack and stack[-1][0]<=p:
+        span += stack.pop()[1]
+    stack.append((p,span))
+    res.append(span)
+print(res)
+________________________________________
+Challenge 24: Largest Rectangle in Histogram
+heights = [2,1,5,6,2,3]
+stack = []
+max_area = 0
+heights.append(0)
+for i,h in enumerate(heights):
+    while stack and heights[stack[-1]]>h:
+        H = heights[stack.pop()]
+        W = i if not stack else i-stack[-1]-1
+        max_area = max(max_area,H*W)
+    stack.append(i)
+print(max_area)
+________________________________________
+Challenge 25: Sliding Window Maximum
+nums = [1,3,-1,-3,5,3,6,7]
+k = 3
+from collections import deque
+res = []
+dq = deque()
+for i,n in enumerate(nums):
+    while dq and dq[0]<=i-k:
+        dq.popleft()
+    while dq and nums[dq[-1]]<n:
+        dq.pop()
+    dq.append(i)
+    if i>=k-1:
+        res.append(nums[dq[0]])
+print(res)
+________________________________________
+Challenge 26: Trapping Rain Water
+height = [0,1,0,2,1,0,1,3,2,1,2,1]
+left = [0]*len(height)
+right = [0]*len(height)
+res = 0
+for i in range(1,len(height)):
+    left[i] = max(left[i-1],height[i-1])
+for i in range(len(height)-2,-1,-1):
+    right[i] = max(right[i+1],height[i+1])
+for i,h in enumerate(height):
+    water = min(left[i],right[i])-h
+    if water>0:
+        res += water
+print(res)
+________________________________________
+Challenge 27: Container With Most Water
+height = [1,8,6,2,5,4,8,3,7]
+l,r = 0,len(height)-1
+max_area = 0
+while l<r:
+    max_area = max(max_area, min(height[l],height[r])*(r-l))
+    if height[l]<height[r]:
+        l += 1
+    else:
+        r -= 1
+print(max_area)
+________________________________________
+Challenge 28: Merge Intervals
+intervals = [[1,3],[2,6],[8,10],[15,18]]
+intervals.sort()
+res = [intervals[0]]
+for start,end in intervals[1:]:
+    last_end = res[-1][1]
+    if start <= last_end:
+        res[-1][1] = max(last_end,end)
+    else:
+        res.append([start,end])
+print(res)
+________________________________________
+Challenge 29: Insert Interval
+intervals = [[1,3],[6,9]]
+newInterval = [2,5]
+res = []
+for start,end in intervals:
+    if end<newInterval[0]:
+        res.append([start,end])
+    elif start>newInterval[1]:
+        res.append(newInterval)
+        newInterval = [start,end]
+    else:
+        newInterval = [min(start,newInterval[0]), max(end,newInterval[1])]
+res.append(newInterval)
+print(res)
+________________________________________
+Challenge 30: Non-overlapping Intervals
+intervals = [[1,2],[2,3],[3,4],[1,3]]
+intervals.sort(key=lambda x:x[1])
+end = float('-inf')
+count = 0
+for s,e in intervals:
+    if s>=end:
+        end = e
+    else:
+        count += 1
+print(count)
+

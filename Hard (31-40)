@@ -1,0 +1,107 @@
+Challenge 31: Meeting Rooms
+What to do:
+Given an array of meeting time intervals consisting of start and end times, determine if a person can attend all meetings without overlap.
+Example Input:
+intervals = [[0,30],[5,10],[15,20]]
+Example Output:
+False
+Explanation:
+Meetings [0,30] and [5,10] overlap, so it’s impossible to attend all meetings.
+________________________________________
+Challenge 32: Minimum Meeting Rooms
+What to do:
+Given an array of meeting intervals, find the minimum number of conference rooms required.
+Example Input:
+intervals = [[0,30],[5,10],[15,20]]
+Example Output:
+2
+Explanation:
+Two rooms are needed:
+•	Room 1: [0,30] 
+•	Room 2: [5,10] and [15,20] (non-overlapping in the same room) 
+________________________________________
+Challenge 33: Search in Rotated Sorted Array
+What to do:
+Given a sorted array that has been rotated at an unknown pivot, search for a target value and return its index. Return -1 if not found.
+Example Input:
+nums = [4,5,6,7,0,1,2]
+target = 0
+Example Output:
+4
+Explanation:
+0 is at index 4 in the array.
+________________________________________
+Challenge 34: Find Minimum in Rotated Sorted Array
+What to do:
+Given a rotated sorted array, find the minimum element.
+Example Input:
+nums = [3,4,5,1,2]
+Example Output:
+1
+Explanation:
+1 is the smallest element after rotation.
+________________________________________
+Challenge 35: Peak Element
+What to do:
+Given an array, find any element that is greater than its neighbors (a peak element). For boundary elements, consider only one neighbor.
+Example Input:
+nums = [1,2,3,1]
+Example Output:
+3
+Explanation:
+3 is greater than neighbors 2 and 1.
+________________________________________
+Challenge 36: Search Range
+What to do:
+Given a sorted array and a target value, return the starting and ending position of the target in the array. If not found, return [-1,-1].
+Example Input:
+nums = [5,7,7,8,8,10]
+target = 8
+Example Output:
+[3,4]
+Explanation:
+8 appears at indices 3 and 4.
+________________________________________
+Challenge 37: Kth Largest Element
+What to do:
+Find the kth largest element in an unsorted array.
+Example Input:
+nums = [3,2,1,5,6,4]
+k = 2
+Example Output:
+5
+Explanation:
+The sorted array is [1,2,3,4,5,6]. The 2nd largest is 5.
+________________________________________
+Challenge 38: Top K Frequent Elements
+What to do:
+Given a non-empty array, return the k most frequent elements.
+Example Input:
+nums = [1,1,1,2,2,3]
+k = 2
+Example Output:
+[1,2]
+Explanation:
+1 occurs 3 times, 2 occurs 2 times, which are the top two frequent elements.
+________________________________________
+Challenge 39: Sort Colors
+What to do:
+Given an array with 0, 1, and 2, sort the array in-place without using built-in sort.
+Example Input:
+nums = [2,0,2,1,1,0]
+Example Output:
+[0,0,1,1,2,2]
+Explanation:
+All 0s, 1s, and 2s are grouped in order.
+________________________________________
+Challenge 40: Find K Closest Elements
+What to do:
+Given a sorted array, a number x, and an integer k, find the k elements closest to x. Return the result sorted in ascending order.
+Example Input:
+arr = [1,2,3,4,5]
+k = 4, x = 3
+Example Output:
+[1,2,3,4]
+Explanation:
+The 4 elements closest to 3 are [1,2,3,4].
+

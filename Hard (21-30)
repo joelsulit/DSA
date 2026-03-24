@@ -1,0 +1,107 @@
+Challenge 21: Next Greater Element
+What to do:
+Given a list of integers, find the next greater element for each number. The next greater element is the first number to the right that is larger. If there is none, print -1.
+Example Input:
+nums = [4, 5, 2, 10, 8]
+Example Output:
+[5, 10, 10, -1, -1]
+Explanation:
+•	Next greater of 4 is 5 
+•	Next greater of 5 is 10 
+•	Next greater of 2 is 10 
+•	10 has no greater element to its right 
+•	8 has no greater element to its right 
+________________________________________
+Challenge 22: Daily Temperatures
+What to do:
+Given a list of daily temperatures, return a list where each value tells how many days must pass until a warmer temperature. If there is no future warmer day, use 0.
+Example Input:
+temps = [73, 74, 75, 71, 69, 72, 76, 73]
+Example Output:
+[1, 1, 4, 2, 1, 1, 0, 0]
+Explanation:
+For example, temperature 73 on day 1 waits 1 day for 74.
+Temperature 75 waits 4 days for 76.
+________________________________________
+Challenge 23: Stock Span Problem
+What to do:
+Given a list of daily stock prices, find the span of each day. The span is the number of consecutive days before it, including today, where the price was less than or equal to today’s price.
+Example Input:
+prices = [100, 80, 60, 70, 60, 75, 85]
+Example Output:
+[1, 1, 1, 2, 1, 4, 6]
+Explanation:
+For price 75, the span is 4 because the last 4 prices including itself are less than or equal to 75.
+________________________________________
+Challenge 24: Largest Rectangle in Histogram
+What to do:
+Given a list of bar heights in a histogram, find the area of the largest rectangle that can be formed.
+Example Input:
+heights = [2, 1, 5, 6, 2, 3]
+Example Output:
+10
+Explanation:
+The largest rectangle is formed using bars with heights 5 and 6, giving area 5 × 2 = 10.
+________________________________________
+Challenge 25: Sliding Window Maximum
+What to do:
+Given a list of integers and a window size k, find the maximum value in each contiguous window of size k.
+Example Input:
+nums = [1, 3, -1, -3, 5, 3, 6, 7]
+k = 3
+Example Output:
+[3, 3, 5, 5, 6, 7]
+Explanation:
+The maximum values in each window of size 3 are found as the window moves from left to right.
+________________________________________
+Challenge 26: Trapping Rain Water
+What to do:
+Given a list of non-negative integers representing bar heights, compute how much rainwater can be trapped between the bars.
+Example Input:
+height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]
+Example Output:
+6
+Explanation:
+The bars can trap a total of 6 units of water.
+________________________________________
+Challenge 27: Container With Most Water
+What to do:
+Given a list of heights, where each height represents a vertical line, find the maximum amount of water a container can store using any two lines.
+Example Input:
+height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
+Example Output:
+49
+Explanation:
+The largest container is formed by heights 8 and 7, with width 7, so the area is 7 × 7 = 49.
+________________________________________
+Challenge 28: Merge Intervals
+What to do:
+Given a list of intervals, merge all overlapping intervals and return the result.
+Example Input:
+intervals = [[1,3],[2,6],[8,10],[15,18]]
+Example Output:
+[[1,6],[8,10],[15,18]]
+Explanation:
+The intervals [1,3] and [2,6] overlap, so they are merged into [1,6].
+________________________________________
+Challenge 29: Insert Interval
+What to do:
+Given a sorted list of non-overlapping intervals and a new interval, insert the new interval into the correct position and merge if needed.
+Example Input:
+intervals = [[1,3],[6,9]]
+newInterval = [2,5]
+Example Output:
+[[1,5],[6,9]]
+Explanation:
+The new interval [2,5] overlaps with [1,3], so they merge into [1,5].
+________________________________________
+Challenge 30: Non-overlapping Intervals
+What to do:
+Given a list of intervals, find the minimum number of intervals to remove so that the remaining intervals do not overlap.
+Example Input:
+intervals = [[1,2],[2,3],[3,4],[1,3]]
+Example Output:
+1
+Explanation:
+Removing [1,3] makes the rest of the intervals non-overlapping.
+

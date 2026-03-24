@@ -1,0 +1,139 @@
+Challenge 11: Minimum Size Subarray Sum
+nums = [2,3,1,2,4,3]
+target = 7
+min_len = float('inf')
+start = 0
+curr_sum = 0
+for end in range(len(nums)):
+    curr_sum += nums[end]
+    while curr_sum >= target:
+        min_len = min(min_len, end - start + 1)
+        curr_sum -= nums[start]
+        start += 1
+print(min_len if min_len != float('inf') else 0)
+________________________________________
+Challenge 12: Subarray with Sum Zero
+nums = [4,2,-3,1,6]
+seen = set()
+curr_sum = 0
+found = False
+for n in nums:
+    curr_sum += n
+    if curr_sum == 0 or curr_sum in seen:
+        found = True
+        break
+    seen.add(curr_sum)
+print(found)
+________________________________________
+Challenge 13: Count Subarrays with Given Sum
+nums = [1,1,1]
+target = 2
+count = 0
+prefix = {0:1}
+curr_sum = 0
+for n in nums:
+    curr_sum += n
+    count += prefix.get(curr_sum-target,0)
+    prefix[curr_sum] = prefix.get(curr_sum,0)+1
+print(count)
+________________________________________
+Challenge 14: Longest Subarray with Equal 0s and 1s
+nums = [0,1,0]
+count = {0:-1}
+curr = 0
+max_len = 0
+for i,n in enumerate(nums):
+    curr += 1 if n==1 else -1
+    if curr in count:
+        max_len = max(max_len, i - count[curr])
+    else:
+        count[curr] = i
+print(max_len)
+________________________________________
+Challenge 15: Longest Unique Substring
+s = "abcabcbb"
+seen = {}
+start = 0
+max_len = 0
+for i,c in enumerate(s):
+    if c in seen and seen[c] >= start:
+        start = seen[c]+1
+    seen[c] = i
+    max_len = max(max_len, i - start + 1)
+print(max_len)
+________________________________________
+Challenge 16: Longest Palindromic Substring
+s = "babad"
+res = ""
+for i in range(len(s)):
+    # odd length
+    l,r = i,i
+    while l>=0 and r<len(s) and s[l]==s[r]:
+        if r-l+1 > len(res):
+            res = s[l:r+1]
+        l -= 1
+        r += 1
+    # even length
+    l,r = i,i+1
+    while l>=0 and r<len(s) and s[l]==s[r]:
+        if r-l+1 > len(res):
+            res = s[l:r+1]
+        l -= 1
+        r += 1
+print(res)
+________________________________________
+Challenge 17: Minimum Window Substring
+s = "ADOBECODEBANC"
+t = "ABC"
+from collections import Counter
+need = Counter(t)
+window = {}
+l = 0
+formed = 0
+res = float('inf'),None,None
+for r,c in enumerate(s):
+    window[c] = window.get(c,0)+1
+    if c in need and window[c]==need[c]:
+        formed += 1
+    while l<=r and formed==len(need):
+        if r-l+1 < res[0]:
+            res = (r-l+1,l,r)
+        window[s[l]] -= 1
+        if s[l] in need and window[s[l]]<need[s[l]]:
+            formed -= 1
+        l += 1
+print(s[res[1]:res[2]+1] if res[0]!=float('inf') else "")
+________________________________________
+Challenge 18: Group Anagrams
+words = ["eat","tea","tan","ate","nat","bat"]
+from collections import defaultdict
+groups = defaultdict(list)
+for w in words:
+    groups[tuple(sorted(w))].append(w)
+print(list(groups.values()))
+________________________________________
+Challenge 19: Valid Parentheses
+s = "{[()]}"
+stack = []
+pairs = {')':'(', '}':'{', ']':'['}
+valid = True
+for c in s:
+    if c in '({[':
+        stack.append(c)
+    else:
+        if not stack or stack[-1]!=pairs[c]:
+            valid = False
+            break
+        stack.pop()
+print(valid)
+________________________________________
+Challenge 20: Remove Adjacent Duplicates
+s = "abbaca"
+stack = []
+for c in s:
+    if stack and stack[-1]==c:
+        stack.pop()
+    else:
+        stack.append(c)
+print(''.join(stack))
+

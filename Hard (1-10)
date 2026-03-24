@@ -1,0 +1,104 @@
+Challenge 1: Two Sum Closest
+What to do:
+Given a list of integers and a target value, find the pair of numbers whose sum is closest to the target.
+Example Input:
+nums = [1, 4, 7, 10]
+target = 15
+Example Output:
+14
+Explanation:
+The pair (4, 10) gives a sum of 14, which is the closest to 15.
+________________________________________
+Challenge 2: First Missing Positive
+What to do:
+Given an unsorted list of integers, find the smallest missing positive integer.
+Example Input:
+nums = [3, 4, -1, 1]
+Example Output:
+2
+Explanation:
+The positive numbers present are 1, 3, 4, so the smallest missing positive is 2.
+________________________________________
+Challenge 3: Longest Consecutive Streak
+What to do:
+Given a list of integers, find the length of the longest sequence of consecutive numbers.
+Example Input:
+nums = [100, 4, 200, 1, 3, 2]
+Example Output:
+4
+Explanation:
+The consecutive sequence is 1, 2, 3, 4, which has length 4.
+________________________________________
+Challenge 4: Product of Array Except Self
+What to do:
+Given a list of integers, create a new list where each element is the product of all other elements except itself.
+Example Input:
+nums = [1, 2, 3, 4]
+Example Output:
+[24, 12, 8, 6]
+Explanation:
+•	For index 0: 2 × 3 × 4 = 24 
+•	For index 1: 1 × 3 × 4 = 12 
+•	For index 2: 1 × 2 × 4 = 8 
+•	For index 3: 1 × 2 × 3 = 6 
+________________________________________
+Challenge 5: Maximum Subarray Sum
+What to do:
+Given a list of integers, find the maximum sum of any contiguous subarray.
+Example Input:
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+Example Output:
+6
+Explanation:
+The subarray [4, -1, 2, 1] has the largest sum, which is 6.
+________________________________________
+Challenge 6: Maximum Product Subarray
+What to do:
+Given a list of integers, find the maximum product of any contiguous subarray.
+Example Input:
+nums = [2, 3, -2, 4]
+Example Output:
+6
+Explanation:
+The subarray [2, 3] gives a product of 6, which is the largest.
+________________________________________
+Challenge 7: Find Duplicate Number
+What to do:
+Given a list containing n + 1 integers where each integer is between 1 and n, find the duplicated number.
+Example Input:
+nums = [1, 3, 4, 2, 2]
+Example Output:
+2
+Explanation:
+The number 2 appears more than once.
+________________________________________
+Challenge 8: Find All Duplicates
+What to do:
+Given a list of integers where each value is between 1 and n, print all numbers that appear exactly twice.
+Example Input:
+nums = [4, 3, 2, 7, 8, 2, 3, 1]
+Example Output:
+[2, 3]
+Explanation:
+The numbers 2 and 3 each appear twice.
+________________________________________
+Challenge 9: Majority Element
+What to do:
+Given a list of integers, find the element that appears more than half the size of the list.
+Example Input:
+nums = [2, 2, 1, 1, 1, 2, 2]
+Example Output:
+2
+Explanation:
+The number 2 appears 4 times in a list of size 7, which is more than 7 // 2.
+________________________________________
+Challenge 10: Elements More Than n/3 Times
+What to do:
+Given a list of integers, print all elements that appear more than n / 3 times.
+Example Input:
+nums = [3, 2, 3]
+Example Output:
+[3]
+Explanation:
+The number 3 appears 2 times, which is more than 3 / 3.
+

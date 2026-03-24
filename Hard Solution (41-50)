@@ -1,0 +1,184 @@
+Challenge 41: Detect Cycle in Linked List
+class ListNode:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+head = ListNode(3)
+head.next = ListNode(2)
+head.next.next = ListNode(0)
+head.next.next.next = ListNode(-4)
+head.next.next.next.next = head.next  # cycle
+slow = fast = head
+found = False
+while fast and fast.next:
+    slow = slow.next
+    fast = fast.next.next
+    if slow==fast:
+        found = True
+        break
+print(found)
+Challenge 42: Middle of Linked List
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
+slow = fast = head
+while fast and fast.next:
+    slow = slow.next
+    fast = fast.next.next
+print(slow.val)
+Challenge 43: Reverse Linked List
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
+prev = None
+curr = head
+while curr:
+    nxt = curr.next
+    curr.next = prev
+    prev = curr
+    curr = nxt
+# print reversed list
+res = []
+curr = prev
+while curr:
+    res.append(curr.val)
+    curr = curr.next
+print(res)
+Challenge 44: Remove Nth Node From End
+head = ListNode(1)
+head.next = ListNode(2)
+head.next.next = ListNode(3)
+head.next.next.next = ListNode(4)
+head.next.next.next.next = ListNode(5)
+n = 2
+dummy = ListNode(0)
+dummy.next = head
+first = second = dummy
+for _ in range(n+1):
+    first = first.next
+while first:
+    first = first.next
+    second = second.next
+second.next = second.next.next
+res = []
+curr = dummy.next
+while curr:
+    res.append(curr.val)
+    curr = curr.next
+print(res)
+Challenge 45: Intersection of Two Linked Lists
+# List A: 4->1->8->4->5
+# List B: 5->0->1->8->4->5
+a = [4,1,8,4,5]
+b = [5,0,1,8,4,5]
+nodes = {}
+for val in set(a+b):
+    nodes[val] = ListNode(val)
+headA = curr = nodes[a[0]]
+for val in a[1:]:
+    curr.next = nodes[val]
+    curr = curr.next
+headB = curr = nodes[b[0]]
+for val in b[1:]:
+    curr.next = nodes[val]
+    curr = curr.next
+pa,pb = headA,headB
+while pa!=pb:
+    pa = pa.next if pa else headB
+    pb = pb.next if pb else headA
+print(pa.val if pa else None)
+Challenge 46: Lowest Common Ancestor in BST
+class TreeNode:
+    def __init__(self,val):
+        self.val = val
+        self.left = self.right = None
+root = TreeNode(6)
+root.left = TreeNode(2)
+root.right = TreeNode(8)
+root.left.left = TreeNode(0)
+root.left.right = TreeNode(4)
+root.right.left = TreeNode(7)
+root.right.right = TreeNode(9)
+root.left.right.left = TreeNode(3)
+root.left.right.right = TreeNode(5)
+p,q = 2,8
+node = root
+while node:
+    if p<node.val and q<node.val:
+        node = node.left
+    elif p>node.val and q>node.val:
+        node = node.right
+    else:
+        break
+print(node.val)
+Challenge 47: Level Order Traversal
+from collections import deque
+root = TreeNode(3)
+root.left = TreeNode(9)
+root.right = TreeNode(20)
+root.right.left = TreeNode(15)
+root.right.right = TreeNode(7)
+res = []
+q = deque([root])
+while q:
+    level = []
+    for _ in range(len(q)):
+        node = q.popleft()
+        level.append(node.val)
+        if node.left: q.append(node.left)
+        if node.right: q.append(node.right)
+    res.append(level)
+print(res)
+Challenge 48: Validate BST
+def isBST(node,low=float('-inf'),high=float('inf')):
+    if not node: return True
+    if not (low<node.val<high): return False
+    return isBST(node.left,low,node.val) and isBST(node.right,node.val,high)
+root = TreeNode(2)
+root.left = TreeNode(1)
+root.right = TreeNode(3)
+print(isBST(root))
+Challenge 49: Number of Islands
+grid = [
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+]
+def dfs(i,j):
+    if i<0 or j<0 or i>=len(grid) or j>=len(grid[0]) or grid[i][j]=="0":
+        return
+    grid[i][j] = "0"
+    dfs(i+1,j)
+    dfs(i-1,j)
+    dfs(i,j+1)
+    dfs(i,j-1)
+count = 0
+for i in range(len(grid)):
+    for j in range(len(grid[0])):
+        if grid[i][j]=="1":
+            dfs(i,j)
+            count += 1
+print(count)
+Challenge 50: Flood Fill
+image = [
+  [1,1,1],
+  [1,1,0],
+  [1,0,1]
+]
+sr,sc,newColor = 1,1,2
+oldColor = image[sr][sc]
+def dfs(r,c):
+    if r<0 or c<0 or r>=len(image) or c>=len(image[0]) or image[r][c]!=oldColor:
+        return
+    image[r][c]=newColor
+    dfs(r+1,c)
+    dfs(r-1,c)
+    dfs(r,c+1)
+    dfs(r,c-1)
+dfs(sr,sc)
+print(image)

@@ -1,0 +1,105 @@
+Challenge 11: Minimum Size Subarray Sum
+What to do:
+Given a list of positive integers and a target value, find the length of the smallest contiguous subarray whose sum is greater than or equal to the target.
+Example Input:
+nums = [2, 3, 1, 2, 4, 3]
+target = 7
+Example Output:
+2
+Explanation:
+The subarray [4, 3] has a sum of 7, and its length is 2, which is the smallest possible.
+________________________________________
+Challenge 12: Subarray with Sum Zero
+What to do:
+Given a list of integers, determine if there is any contiguous subarray whose sum is equal to 0.
+Example Input:
+nums = [4, 2, -3, 1, 6]
+Example Output:
+True
+Explanation:
+The subarray [2, -3, 1] has a sum of 0.
+________________________________________
+Challenge 13: Count Subarrays with Given Sum
+What to do:
+Given a list of integers and a target value, count how many contiguous subarrays have a sum equal to the target.
+Example Input:
+nums = [1, 1, 1]
+target = 2
+Example Output:
+2
+Explanation:
+The subarrays [1, 1] at positions (0,1) and (1,2) both have a sum of 2.
+________________________________________
+Challenge 14: Longest Subarray with Equal 0s and 1s
+What to do:
+Given a binary list, find the length of the longest contiguous subarray containing an equal number of 0s and 1s.
+Example Input:
+nums = [0, 1, 0]
+Example Output:
+2
+Explanation:
+The subarray [0, 1] has one 0 and one 1, so its length is 2.
+________________________________________
+Challenge 15: Longest Unique Substring
+What to do:
+Given a string, find the length of the longest substring without repeating characters.
+Example Input:
+s = "abcabcbb"
+Example Output:
+3
+Explanation:
+The longest substring without repeating characters is "abc", which has length 3.
+________________________________________
+Challenge 16: Longest Palindromic Substring
+What to do:
+Given a string, find the longest substring that is a palindrome.
+Example Input:
+s = "babad"
+Example Output:
+"bab"
+Explanation:
+"bab" is a palindrome and is one of the longest palindromic substrings in the given string.
+________________________________________
+Challenge 17: Minimum Window Substring
+What to do:
+Given two strings s and t, find the smallest substring in s that contains all the characters in t.
+Example Input:
+s = "ADOBECODEBANC"
+t = "ABC"
+Example Output:
+"BANC"
+Explanation:
+"BANC" is the shortest substring that contains A, B, and C.
+________________________________________
+Challenge 18: Group Anagrams
+What to do:
+Given a list of strings, group together the words that are anagrams of each other.
+Example Input:
+words = ["eat", "tea", "tan", "ate", "nat", "bat"]
+Example Output:
+[["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+Explanation:
+Words that contain the same letters in different order belong to the same group.
+________________________________________
+Challenge 19: Valid Parentheses
+What to do:
+Given a string containing only (, ), {, }, [ and ], determine if the brackets are balanced.
+Example Input:
+s = "{[()]}"
+Example Output:
+True
+Explanation:
+Every opening bracket has the correct closing bracket in the correct order.
+________________________________________
+Challenge 20: Remove Adjacent Duplicates
+What to do:
+Given a string, repeatedly remove adjacent duplicate characters until no more duplicates remain.
+Example Input:
+s = "abbaca"
+Example Output:
+"ca"
+Explanation:
+•	Remove "bb" → "aaca" 
+•	Remove "aa" → "ca"
+No adjacent duplicates remain.
+

@@ -1,0 +1,92 @@
+This file contains quick pointers, tips, and patterns to review for all **50 DSA 5-minute challenges**.
+
+---
+
+## **Array & Hashing (Challenges 1–10)**
+1. **Two Sum Closest:** Use hash maps for complements; track closest sum with `abs()`. 
+2. **First Missing Positive:** Hash set to check existence; iterate from 1 upward. 
+3. **Longest Consecutive Streak:** Start streak when `num-1` not in set; use hash set. 
+4. **Product of Array Except Self:** Prefix & suffix products; avoid division. 
+5. **Maximum Subarray Sum:** Kadane’s algorithm; track running sum. 
+6. **Maximum Product Subarray:** Track min & max products due to negatives. 
+7. **Find Duplicate Number:** Use hash set or Floyd’s cycle detection for arrays. 
+8. **Find All Duplicates:** Track seen numbers; collect duplicates. 
+9. **Majority Element:** Count occurrences; Moore’s Voting Algorithm is optimal. 
+10. **Elements > n/3:** Count occurrences using hashmap; check threshold.
+
+---
+
+## **Sliding Window & Prefix Sum (Challenges 11–20)**
+11. **Minimum Size Subarray Sum:** Sliding window for positive numbers; prefix sum + map for arbitrary sums. 
+12. **Subarray with Sum Zero:** Prefix sums + set to detect repeats. 
+13. **Count Subarrays with Given Sum:** Use prefix sum + hashmap for O(n) solution. 
+14. **Longest Subarray with Equal 0s and 1s:** Transform 0 → -1, use running sum + hashmap. 
+15. **Longest Unique Substring:** Sliding window + hashmap to track last seen indices. 
+16. **Longest Palindromic Substring:** Expand around centers (odd & even). 
+17. **Minimum Window Substring:** Counter for required chars; expand/shrink window. 
+18. **Group Anagrams:** Sort string or use char count as key in hashmap. 
+19. **Valid Parentheses:** Use stack for opening/closing brackets. 
+20. **Remove Adjacent Duplicates:** Stack pattern; pop when duplicate detected.
+
+---
+
+## **Stack & Queue Patterns (Challenges 21–30)**
+21. **Next Greater Element:** Monotonic stack to find next larger element. 
+22. **Daily Temperatures:** Monotonic stack; track indices for difference in days. 
+23. **Stock Span Problem:** Stack to maintain previous greater values. 
+24. **Largest Rectangle in Histogram:** Stack for heights; calculate width when popping. 
+25. **Sliding Window Maximum:** Deque for maintaining max in window. 
+26. **Trapping Rain Water:** Precompute left/right max or use two-pointer. 
+27. **Container With Most Water:** Two-pointer to maximize min(height) * width. 
+28. **Merge Intervals:** Sort by start; merge overlapping intervals. 
+29. **Insert Interval:** Merge as needed; maintain result array. 
+30. **Non-overlapping Intervals:** Sort by end; greedy removal of overlaps.
+
+---
+
+## **Binary Search & Rotated Arrays (Challenges 31–40)**
+31. **Meeting Rooms:** Sort intervals; check for overlaps. 
+32. **Minimum Meeting Rooms:** Min-heap for tracking room end times. 
+33. **Search in Rotated Sorted Array:** Binary search, find sorted half. 
+34. **Find Minimum in Rotated Array:** Binary search on rotation pivot. 
+35. **Peak Element:** Compare mid with neighbors; binary search. 
+36. **Search Range:** Binary search for left & right boundaries. 
+37. **Kth Largest Element:** Heap (`nlargest`) or quickselect. 
+38. **Top K Frequent Elements:** Counter + heap; sort by frequency. 
+39. **Sort Colors:** Dutch National Flag (0/1/2) with three pointers. 
+40. **Find K Closest Elements:** Binary search window for closest `x`.
+
+---
+
+## **Linked Lists (Challenges 41–45)**
+41. **Detect Cycle:** Fast & slow pointers (Floyd’s algorithm). 
+42. **Middle of Linked List:** Slow & fast pointers; middle = slow. 
+43. **Reverse Linked List:** Iterative reversal using `prev` and `curr`. 
+44. **Remove Nth Node From End:** Dummy node + two pointers. 
+45. **Intersection of Two Linked Lists:** Two-pointer method; align heads.
+
+---
+
+## **Trees (Challenges 46–48)**
+46. **Lowest Common Ancestor in BST:** Traverse until root splits `p` & `q`. 
+47. **Level Order Traversal:** BFS using queue; track levels. 
+48. **Validate BST:** Recursive check with min/max constraints.
+
+---
+
+## **Graphs / Grids (Challenges 49–50)**
+49. **Number of Islands:** DFS/BFS for connected components; mark visited. 
+50. **Flood Fill:** DFS/BFS starting from source; fill connected cells.
+
+---
+
+## **General Patterns / Tricks**
+- **Hashing:** Lookup, counting, index mapping. 
+- **Two-pointer / Sliding window:** Sums, substrings, left-right comparisons. 
+- **Stack:** Monotonic stack, parenthesis matching, histogram problems. 
+- **Heap:** Top-k problems, priority queues. 
+- **Binary Search:** Sorted arrays, rotated arrays, answer space. 
+- **Linked List Pointers:** Fast/slow for cycle, middle, removal. 
+- **DFS/BFS:** Trees, grids, islands, flood fill. 
+- **Prefix Sum:** Subarrays sums efficiently. 
+- **Greedy / Sorting:** Interval problems, area maximization, merging.

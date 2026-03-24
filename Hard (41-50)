@@ -1,0 +1,115 @@
+Challenge 41: Detect Cycle in Linked List
+What to do:
+Given the head of a linked list, determine if the list contains a cycle.
+Example Input:
+head = [3,2,0,-4] (where -4 points back to node 2)
+Example Output:
+True
+Explanation:
+The node -4 connects back to 2, forming a cycle.
+________________________________________
+Challenge 42: Middle of Linked List
+What to do:
+Given the head of a linked list, return the middle node. If there are two middle nodes, return the second one.
+Example Input:
+head = [1,2,3,4,5]
+Example Output:
+3
+Explanation:
+Node 3 is in the middle of the linked list.
+________________________________________
+Challenge 43: Reverse Linked List
+What to do:
+Given the head of a linked list, reverse the list and return the new head.
+Example Input:
+head = [1,2,3,4,5]
+Example Output:
+[5,4,3,2,1]
+Explanation:
+The linked list is reversed.
+________________________________________
+Challenge 44: Remove Nth Node From End
+What to do:
+Given the head of a linked list, remove the nth node from the end and return the head.
+Example Input:
+head = [1,2,3,4,5], n = 2
+Example Output:
+[1,2,3,5]
+Explanation:
+The second node from the end (4) is removed.
+________________________________________
+Challenge 45: Intersection of Two Linked Lists
+What to do:
+Given the heads of two singly linked lists, return the node at which the two lists intersect. Return None if they do not intersect.
+Example Input:
+List A = [4,1,8,4,5]
+List B = [5,0,1,8,4,5]
+Example Output:
+8
+Explanation:
+The two linked lists intersect at node 8.
+________________________________________
+Challenge 46: Lowest Common Ancestor in BST
+What to do:
+Given a binary search tree and two nodes, find their lowest common ancestor (LCA).
+Example Input:
+root = [6,2,8,0,4,7,9,null,null,3,5]
+p = 2, q = 8
+Example Output:
+6
+Explanation:
+Node 6 is the lowest common ancestor of 2 and 8.
+________________________________________
+Challenge 47: Level Order Traversal
+What to do:
+Given the root of a binary tree, return its level order traversal as a list of lists.
+Example Input:
+root = [3,9,20,null,null,15,7]
+Example Output:
+[[3],[9,20],[15,7]]
+Explanation:
+Nodes are grouped by their depth levels.
+________________________________________
+Challenge 48: Validate BST
+What to do:
+Given a binary tree, determine if it is a valid binary search tree (BST).
+Example Input:
+root = [2,1,3]
+Example Output:
+True
+Explanation:
+All nodes follow BST properties: left < root < right.
+________________________________________
+Challenge 49: Number of Islands
+What to do:
+Given a 2D grid of '1' (land) and '0' (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically.
+Example Input:
+grid = [
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+]
+Example Output:
+3
+Explanation:
+There are three separate islands in the grid.
+________________________________________
+Challenge 50: Flood Fill
+What to do:
+Given a 2D grid, a starting cell, and a new color, fill the connected area with the new color (like the paint bucket tool).
+Example Input:
+image = [
+  [1,1,1],
+  [1,1,0],
+  [1,0,1]
+], sr = 1, sc = 1, newColor = 2
+Example Output:
+[
+  [2,2,2],
+  [2,2,0],
+  [2,0,1]
+]
+Explanation:
+All connected cells with the original color 1 starting from (1,1) are changed to 2.
+

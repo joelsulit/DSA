@@ -1,0 +1,104 @@
+Challenge 1: Two Sum Closest
+nums = [1, 4, 7, 10]
+target = 15
+closest = float('inf')
+res = None
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)):
+        s = nums[i] + nums[j]
+        if abs(target - s) < abs(target - closest):
+            closest = s
+print(closest)
+________________________________________
+Challenge 2: First Missing Positive
+nums = [3, 4, -1, 1]
+nums_set = set(nums)
+i = 1
+while i in nums_set:
+    i += 1
+print(i)
+________________________________________
+Challenge 3: Longest Consecutive Streak
+nums = [100, 4, 200, 1, 3, 2]
+nums_set = set(nums)
+longest = 0
+for n in nums_set:
+    if n-1 not in nums_set:
+        current = n
+        length = 1
+        while current+1 in nums_set:
+            current += 1
+            length += 1
+        longest = max(longest, length)
+print(longest)
+________________________________________
+Challenge 4: Product of Array Except Self
+nums = [1,2,3,4]
+res = []
+for i in range(len(nums)):
+    prod = 1
+    for j in range(len(nums)):
+        if i != j:
+            prod *= nums[j]
+    res.append(prod)
+print(res)
+________________________________________
+Challenge 5: Maximum Subarray Sum
+nums = [-2,1,-3,4,-1,2,1,-5,4]
+max_sum = curr_sum = nums[0]
+for n in nums[1:]:
+    curr_sum = max(n, curr_sum+n)
+    max_sum = max(max_sum, curr_sum)
+print(max_sum)
+________________________________________
+Challenge 6: Maximum Product Subarray
+nums = [2,3,-2,4]
+max_prod = min_prod = res = nums[0]
+for n in nums[1:]:
+    if n < 0:
+        max_prod, min_prod = min_prod, max_prod
+    max_prod = max(n, max_prod*n)
+    min_prod = min(n, min_prod*n)
+    res = max(res, max_prod)
+print(res)
+________________________________________
+Challenge 7: Find Duplicate Number
+nums = [1,3,4,2,2]
+seen = set()
+for n in nums:
+    if n in seen:
+        print(n)
+        break
+    seen.add(n)
+________________________________________
+Challenge 8: Find All Duplicates
+nums = [4,3,2,7,8,2,3,1]
+seen = set()
+res = set()
+for n in nums:
+    if n in seen:
+        res.add(n)
+    seen.add(n)
+print(list(res))
+________________________________________
+Challenge 9: Majority Element
+nums = [2,2,1,1,1,2,2]
+count = {}
+for n in nums:
+    count[n] = count.get(n,0)+1
+for k,v in count.items():
+    if v > len(nums)//2:
+        print(k)
+        break
+________________________________________
+Challenge 10: Elements More Than n/3 Times
+nums = [3,2,3]
+count = {}
+res = []
+for n in nums:
+    count[n] = count.get(n,0)+1
+for k,v in count.items():
+    if v > len(nums)//3:
+        res.append(k)
+print(res)
+
